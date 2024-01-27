@@ -1,38 +1,229 @@
+body { 
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #406020; 
+
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+.extra-bold {
+  font-weight: 800;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.material-symbols-rounded { vertical-align: sub; }
+
+.App-header {
+  margin: 0px 16px 0px 16px;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: #406020;
 }
 
-.App-link {
-  color: #61dafb;
+.Header-image {
+  width: 100px;
+  height: 100px;
+  object-fit: scale-down;
+}
+.Header-right {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.Header-text {
+  margin-bottom: 4px;
+  font-weight: 800;
+  font-size: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+.Server-section {
+  flex-grow: 1; /* 예시에서는 4로 설정, 필요에 따라 조절 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #ffffff;
+  background-color: #282830;
+}
+
+.Server-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Server-title {
+  margin: 8px 0px 16px 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.Server-name {
+  vertical-align: bottom;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.title-text {
+  font-weight: 800;
+  font-size: 24px;
+}
+.sub-text {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.Player-list {
+  display: flex;
+  flex-direction: column;
+}
+.Player-title {
+  margin: 4px 16px 8px 16px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.Player-item {
+  margin-bottom: 4px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background: #495057;
+}
+.Player-name {
+  flex-grow: 1;
+}
+.Kick-button {
+  margin-right: 8px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: #000000;
+  background: #ffd700;
+}
+.Ban-button {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background: #ff0000;
+}
+
+.Command-preset {
+  margin: 0px 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Command-section {
+  display: flex;
+  flex-direction: column;
+  color: #282830;
+  background-color: #406020;
+}
+
+.Command-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Round-input-container {
+  flex-grow: 1;
+  margin: 16px 0px 16px 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 25px;
+  background: #D9D9D9;
+}
+.Round-text-container {
+  margin: 0px 16px 16px 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 15px;
+  color: #282830;
+  background: #D9D9D9;
+}
+.Round-container {
+  margin: 0px 16px 16px 16px;
+  padding: 8px 8px 4px 8px;
+  border: none;
+  border-radius: 15px;
+  color: #282830;
+  background: #D9D9D9;
+}
+
+.Round-dropdown {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  color: #282830;
+  background: #D9D9D9;
+}
+.Round-button {
+  margin: 8px 8px 0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  color: #282830;
+  background: #D9D9D9;
+}
+.Circular-button {
+  margin: 16px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  color: #282830;
+}
+
+*:focus { outline: none; }
+ul { 
+  overflow: hidden; 
+  overflow-y: scroll;
+  max-height: 18vh;
+  list-style-type: none; 
+
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+ul::-webkit-scrollbar {
+  display: none;
 }
